@@ -1,0 +1,39 @@
+.tabs {
+  width: calc(100% - 40px);
+  margin: 0 20px;
+}
+.tabs__controls {
+  display: none;
+}
+.tabs__label {
+  display: inline-block;
+  padding: 5px 10px;
+  background: #ddd;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  cursor: pointer;
+}
+.tabs__content {
+  width: calc(100%-20px);
+  min-height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  background: #aaa;
+  color: #fff;
+  border-radius: 0 5px 5px 5px;
+  display: none;
+}
+
+#tab1:checked ~ label[for="tab1"],
+#tab2:checked ~ label[for="tab2"],
+#tab3:checked ~ label[for="tab3"] {
+  background-color: #aaa;
+}
+
+#tab1:checked ~ #section1,
+#tab2:checked ~ #section2,
+#tab3:checked ~ #section3 {
+  display: block;
+}
+
+/*# sourceMappingURL=tabs_style.css.map */

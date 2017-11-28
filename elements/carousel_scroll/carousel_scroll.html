@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Карусель на JS зацикленная (без анимации)</title>
+  <link rel="stylesheet" href="../../css/normalize.min.css">
+  <style>
+    /*    общие стили страницы*/
+      body,html { margin: 0; padding: 0; font-size: 10px } body { font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.8; color: #333 } a { text-decoration: none } img { max-width: 100%; height: auto } .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; clip: rect(0 0 0 0) } ul { margin: 0; padding: 0; list-style: none } .main-wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto; padding: 0 20px; box-sizing: border-box } .main-title { text-align: center; text-transform: uppercase } .home-link { position: relative; display: inline-block; margin-top: 30px; padding: 10px 20px; box-sizing: border-box; color: #333; background-color: #eee; border-radius: 3px; box-shadow: 1px 1px 5px rgba(0,0,0,.3) } .home-link:focus,.home-link:hover { background-color: #f6f6f6 } .home-link:focus { outline: 0 } .home-link:active { background-color: #f6f6f6; top: 1px } .wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto }
+    /*    конец общих стилей страницы*/
+    
+    .carousel__list {
+      display: flex;
+      margin-bottom: 20px;
+      width: 200px;
+      overflow: hidden;
+      height: 100px;
+      list-style: none;
+    }
+    .carousel__item {
+      width: 200px;
+      height: 100px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+      flex-shrink: 0;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1 class="main-title">Карусель на JS зацикленная (без анимации)</h1>
+    
+    <div class="carousel">
+      <ul class="carousel__list">
+        <li class="carousel__item">Первый слайд</li>
+        <li class="carousel__item">Второй слайд</li>
+        <li class="carousel__item">Третий слайд</li>
+      </ul>
+  
+    <button class="prev">Назад</button>
+    <button class="next">Вперед</button>
+    </div>
+    
+    <a href="../../index.html" class="home-link">На главную</a>
+  </div>
+  
+  <script>
+    var list = document.querySelector('.carousel__list');
+    var slides = document.querySelectorAll('.carousel__item');
+
+    var indexOfFirst = 0;
+    var indexOfLast = slides.length - 1;
+
+    var firstSlide = slides[indexOfFirst];
+    var lastSlide = slides[indexOfLast];
+
+    var prevButton = document.querySelector('.prev');
+    var nextButton = document.querySelector('.next');
+
+    function scrollToPrev() {
+
+      list.insertBefore(lastSlide, firstSlide);
+        if (indexOfLast == 0) {
+          indexOfLast = slides.length - 1;
+        } else {
+          indexOfLast -= 1;
+        }
+      lastSlide = slides[indexOfLast];
+        if (indexOfFirst == 0) {
+          indexOfFirst = slides.length - 1;
+        } else {
+          indexOfFirst -= 1;
+        }
+      firstSlide = slides[indexOfFirst];
+    }
+
+
+    function scrollToNext() {
+      list.removeChild(firstSlide);
+      list.appendChild(firstSlide);
+      if (indexOfLast == slides.length - 1) {
+          indexOfLast = 0;
+        } else {
+          indexOfLast += 1;
+        }
+      lastSlide = slides[indexOfLast];
+        if (indexOfFirst == slides.length - 1) {
+          indexOfFirst = 0;
+        } else {
+          indexOfFirst += 1;
+        }
+      firstSlide = slides[indexOfFirst];
+    }
+
+    prevButton.addEventListener('click', scrollToPrev);
+    nextButton.addEventListener('click', scrollToNext);
+  </script>
+</body>
+</html>

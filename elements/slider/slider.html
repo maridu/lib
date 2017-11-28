@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Адаптивный слайдер на чистом CSS</title>
+  <link rel="stylesheet" href="../../css/normalize.min.css">
+  <style>
+/*    общие стили страницы*/
+  body,html { margin: 0; padding: 0; font-size: 10px } body { font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.8; color: #333 } a { text-decoration: none } img { max-width: 100%; height: auto } .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; clip: rect(0 0 0 0) } ul { margin: 0; padding: 0; list-style: none } .main-wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto; padding: 0 20px; box-sizing: border-box } .main-title { text-align: center; text-transform: uppercase } .home-link { position: relative; display: inline-block; margin-top: 30px; padding: 10px 20px; box-sizing: border-box; color: #333; background-color: #eee; border-radius: 3px; box-shadow: 1px 1px 5px rgba(0,0,0,.3) } .home-link:focus,.home-link:hover { background-color: #f6f6f6 } .home-link:focus { outline: 0 } .home-link:active { background-color: #f6f6f6; top: 1px } .wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto }
+/*    конец общих стилей страницы*/
+  </style>
+  <link rel="stylesheet" href="slider_style.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1 class="main-title">Адаптивный слайдер на чистом CSS</h1>
+    <div class="slider">
+      <input type="radio" class="slider__toggle" name="slider__toggle" id="slider__toggle--1" checked>
+      <input type="radio" class="slider__toggle" name="slider__toggle" id="slider__toggle--2">
+      <input type="radio" class="slider__toggle" name="slider__toggle" id="slider__toggle--3">
+      
+      <div class="slider__controls">
+        <label for="slider__toggle--1" class="slider__control"><span class="visually-hidden">Слайдер 1</span></label>
+        <label for="slider__toggle--2" class="slider__control"><span class="visually-hidden">Слайдер 2</span></label>
+        <label for="slider__toggle--3" class="slider__control"><span class="visually-hidden">Слайдер 3</span></label>
+      </div>
+      
+      <ul class="slider__slides">
+        <li class="slider__slide">Слайд 1</li>
+        <li class="slider__slide">Слайд 2</li>
+        <li class="slider__slide">Слайд 3</li>
+      </ul>
+    </div>
+    
+    <a href="../../index.html" class="home-link">На главную</a>
+  </div>
+</body>
+</html>

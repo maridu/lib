@@ -4,61 +4,55 @@
   padding-bottom: 50px;
   margin: 0 auto;
   overflow: hidden;
-  
-  &__toggle {
-    display: none;
-  }
-  
-  &__controls {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    font-size: 0;
-  }
-  
-  &__control {
-    display: inline-block;
-    width: 20px;
-    height: 20px;
-    box-sizing: border-box;
-    margin-right: 20px;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    
-    &:last-child {
-      margin-right: 0;
-    }
-    
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  
-  &__slides {
-    display: flex;
-    flex-flow: row nowrap;
-    width: 100%;
-    
-  }
-  
-  &__slide {
-    display: block;
-    width: 100%;
-    min-height: 200px;
-    flex-shrink: 0;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-  }
+}
+.slider__toggle {
+  display: none;
+}
+.slider__controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  font-size: 0;
+}
+.slider__control {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  margin-right: 20px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.slider__control:last-child {
+  margin-right: 0;
+}
+.slider__control:hover {
+  cursor: pointer;
+}
+.slider__slides {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+}
+.slider__slide {
+  display: block;
+  width: 100%;
+  min-height: 200px;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
 }
 
 #slider__toggle--1:checked ~ .slider__controls > .slider__control[for="slider__toggle--1"] {
   background-color: #ccc;
 }
+
 #slider__toggle--2:checked ~ .slider__controls > .slider__control[for="slider__toggle--2"] {
   background-color: #ccc;
 }
+
 #slider__toggle--3:checked ~ .slider__controls > .slider__control[for="slider__toggle--3"] {
   background-color: #ccc;
 }
@@ -77,3 +71,5 @@
   transform: translateX(-200%);
   transition: transform 0.6s ease-in-out;
 }
+
+/*# sourceMappingURL=slider_style.css.map */
