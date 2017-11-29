@@ -1,0 +1,67 @@
+.rating {
+  
+  &__input {
+    display: none;
+  }
+  
+  &__labels {
+    display: flex;
+  }
+  
+  &__label {
+    margin-right: 5px;
+    cursor: pointer;
+    
+    &:first-child {
+      margin-right: 0;
+    }
+    
+    &--1 {
+      order: 1;
+    }
+    
+    &--2 {
+      order: 2;
+    }
+    
+    &--3 {
+      order: 3;
+    }
+    
+    &--4 {
+      order: 4;
+    }
+    
+    &--5 {
+      order: 5;
+    }
+    
+    &:hover > .rating__star path {
+      fill: gold;
+    }
+    
+    &:hover ~ .rating__label > .rating__star path {
+      fill: gold;
+    }
+  }
+}
+
+#rating-1:checked ~ .rating__labels > .rating__label[for='rating-1'] > .rating__star path,
+#rating-2:checked ~ .rating__labels > .rating__label[for='rating-2'] > .rating__star path,
+#rating-2:checked ~ .rating__labels > .rating__label[for='rating-2'] ~ .rating__label > .rating__star path,
+#rating-3:checked ~ .rating__labels > .rating__label[for='rating-3'] > .rating__star path,
+#rating-3:checked ~ .rating__labels > .rating__label[for='rating-3'] ~ .rating__label > .rating__star path,
+#rating-4:checked ~ .rating__labels > .rating__label[for='rating-4'] > .rating__star path,
+#rating-4:checked ~ .rating__labels > .rating__label[for='rating-4'] ~ .rating__label > .rating__star path,
+#rating-5:checked ~ .rating__labels > .rating__label[for='rating-5'] > .rating__star path,
+#rating-5:checked ~ .rating__labels > .rating__label[for='rating-5'] ~ .rating__label > .rating__star path {
+  fill: gold;
+}
+
+//#rating-2:checked ~ .rating__labels > .rating__label[for='rating-2'] > .rating__star path {
+//  fill: gold;
+//}
+//
+//#rating-2:checked ~ .rating__labels > .rating__label[for='rating-2'] ~ .rating__label > .rating__star path {
+//  fill: gold;
+//}

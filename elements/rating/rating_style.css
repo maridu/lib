@@ -1,0 +1,48 @@
+.rating__input {
+  display: none;
+}
+.rating__labels {
+  display: flex;
+}
+.rating__label {
+  margin-right: 5px;
+  cursor: pointer;
+}
+.rating__label:first-child {
+  margin-right: 0;
+}
+.rating__label--1 {
+  order: 1;
+}
+.rating__label--2 {
+  order: 2;
+}
+.rating__label--3 {
+  order: 3;
+}
+.rating__label--4 {
+  order: 4;
+}
+.rating__label--5 {
+  order: 5;
+}
+.rating__label:hover > .rating__star path {
+  fill: gold;
+}
+.rating__label:hover ~ .rating__label > .rating__star path {
+  fill: gold;
+}
+
+#rating-1:checked ~ .rating__labels > .rating__label[for='rating-1'] > .rating__star path,
+#rating-2:checked ~ .rating__labels > .rating__label[for='rating-2'] > .rating__star path,
+#rating-2:checked ~ .rating__labels > .rating__label[for='rating-2'] ~ .rating__label > .rating__star path,
+#rating-3:checked ~ .rating__labels > .rating__label[for='rating-3'] > .rating__star path,
+#rating-3:checked ~ .rating__labels > .rating__label[for='rating-3'] ~ .rating__label > .rating__star path,
+#rating-4:checked ~ .rating__labels > .rating__label[for='rating-4'] > .rating__star path,
+#rating-4:checked ~ .rating__labels > .rating__label[for='rating-4'] ~ .rating__label > .rating__star path,
+#rating-5:checked ~ .rating__labels > .rating__label[for='rating-5'] > .rating__star path,
+#rating-5:checked ~ .rating__labels > .rating__label[for='rating-5'] ~ .rating__label > .rating__star path {
+  fill: gold;
+}
+
+/*# sourceMappingURL=rating_style.css.map */
