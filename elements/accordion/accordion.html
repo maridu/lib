@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Аккордеон на чистом CSS</title>
+  <link rel="stylesheet" href="../../css/normalize.min.css">
+  <style>
+  /*    общие стили страницы*/
+    body,html { margin: 0; padding: 0; font-size: 10px } body { font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.8; color: #333 } a { text-decoration: none } img { max-width: 100%; height: auto } .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; clip: rect(0 0 0 0) } ul { margin: 0; padding: 0; list-style: none } .main-wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto; padding: 0 20px 20px 20px; box-sizing: border-box } .main-title { text-align: center; text-transform: uppercase } .home-link { position: relative; display: inline-block; margin-top: 30px; padding: 10px 20px; box-sizing: border-box; color: #333; background-color: #eee; border-radius: 3px; box-shadow: 1px 1px 5px rgba(0,0,0,.3) } .home-link:focus,.home-link:hover { background-color: #f6f6f6 } .home-link:focus { outline: 0 } .home-link:active { background-color: #f6f6f6; top: 1px } .wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto }
+  /*    конец общих стилей страницы*/
+  </style>
+  <link rel="stylesheet" href="accordion_style.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1 class="main-title">Аккордеон на чистом CSS</h1>
+      
+      <ul class="accordion">
+        <li class="accordion__item">
+          <input type="checkbox" class="accordion__input" name="accordion" id="accordion-1">
+          <label for="accordion-1" class="accordion__label">Заголовок 1</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <input type="checkbox" class="accordion__input" name="accordion" id="accordion-2">
+          <label for="accordion-2" class="accordion__label">Заголовок 2</label>
+          <div class="accordion__content">
+           <p class="accordion__text">
+            Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир грамматики. Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с запятой, но текст не дал сбить себя с толку.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <input type="checkbox" class="accordion__input" name="accordion" id="accordion-3">
+          <label for="accordion-3" class="accordion__label">Заголовок 3</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись на первую вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города Буквоград, на заголовок деревни Алфавит и на подзаголовок своего переулка Строчка. Грустный реторический вопрос скатился по его щеке и он продолжил свой путь.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <input type="checkbox" class="accordion__input" name="accordion" id="accordion-4">
+          <label for="accordion-4" class="accordion__label">Заголовок 4</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              По дороге встретил текст рукопись. Она предупредила его: «В моей стране все переписывается по несколько раз. Единственное, что от меня осталось, это приставка «и». Возвращайся ты лучше в свою безопасную страну». Не послушавшись рукописи, наш текст продолжил свой путь.
+            </p>
+          </div>
+        </li>
+        <li class="accordion__item">
+          <input type="checkbox" class="accordion__input" name="accordion" id="accordion-5">
+          <label for="accordion-5" class="accordion__label">Заголовок 5</label>
+          <div class="accordion__content">
+            <p class="accordion__text">
+              Вскоре ему повстречался коварный составитель рекламных текстов, напоивший его языком и речью и заманивший в свое агенство, которое использовало его снова и снова в своих проектах. И если его не переписали, то живет он там до сих пор. Далеко-далеко за словесными горами в стране гласных и согласных живут рыcontentбные тексты. Вдали от всех живут они в буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по всей стране и обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные члены предложения залетают прямо в рот. Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ жизни. Однажды одна маленькая 
+            </p>
+          </div>
+        </li>
+      </ul>   
+    
+
+    <a href="../../index.html" class="home-link">На главную</a>
+  </div>
+</body>
+</html>

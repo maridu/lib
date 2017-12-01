@@ -1,0 +1,114 @@
+@keyframes hideAnimation {
+  0% {
+    transform: scaleY(1);
+  }
+  40% {
+    transform: scaleY(0.99);
+  }
+  80% {
+    transform: scaleY(1.02);
+  }
+  100% {
+    transform: scaleY(0);
+  }
+}
+@keyframes showAnimation {
+  0% {
+    transform: scaleY(0.1);
+  }
+  40% {
+    transform: scaleY(1.02);
+  }
+  80% {
+    transform: scaleY(0.99);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
+.accordion {
+  position: relative;
+  width: 85%;
+  min-width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  list-style: none;
+}
+.accordion__input {
+  display: none;
+}
+.accordion__item {
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+.accordion__item:last-child {
+  border-bottom: 0;
+}
+.accordion__item:first-child > label {
+  border-radius: 10px 10px 0 0;
+}
+.accordion__item:last-child > label {
+  border-radius: 0 0 10px 10px;
+}
+.accordion__label {
+  position: relative;
+  display: block;
+  padding: 10px 20px;
+  background-color: #eee;
+  cursor: pointer;
+}
+.accordion__label::after {
+  position: absolute;
+  top: 8px;
+  right: 15px;
+  content: "+";
+  width: 30px;
+  height: 30px;
+  border: 1px solid #aaa;
+  border-radius: 50%;
+  box-sizing: border-box;
+  font-size: 30px;
+  color: #aaa;
+  text-align: center;
+  line-height: 1;
+}
+.accordion__content {
+  padding-left: 20px;
+  padding-right: 20px;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transform: scaleY(0);
+  transform-origin: 50% 0%;
+  transition: max-height 0.3s linear;
+  animation: hideAnimation 0.3s linear;
+}
+
+#accordion-1:checked ~ .accordion__content,
+#accordion-2:checked ~ .accordion__content,
+#accordion-3:checked ~ .accordion__content,
+#accordion-4:checked ~ .accordion__content,
+#accordion-5:checked ~ .accordion__content {
+  max-height: 9999px;
+  box-sizing: border-box;
+  transform: scaleY(1);
+  animation: showAnimation 0.5s linear;
+  transition: max-height 0.5s linear;
+}
+
+#accordion-5:checked ~ .accordion__label {
+  border-radius: 0;
+}
+
+#accordion-1:checked ~ .accordion__label::after,
+#accordion-2:checked ~ .accordion__label::after,
+#accordion-3:checked ~ .accordion__label::after,
+#accordion-4:checked ~ .accordion__label::after,
+#accordion-5:checked ~ .accordion__label::after {
+  content: "-";
+  line-height: 0.8;
+}
+
+/*# sourceMappingURL=accordion_style.css.map */
