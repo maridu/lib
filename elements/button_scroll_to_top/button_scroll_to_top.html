@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Кнопка "Наверх" на JS</title>
+  <link rel="stylesheet" href="../../css/normalize.min.css">
+  <style>
+  /*    общие стили страницы*/
+    body,html { margin: 0; padding: 0; font-size: 10px } body { font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.8; color: #333 } a { text-decoration: none } img { max-width: 100%; height: auto } .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; clip: rect(0 0 0 0) } ul { margin: 0; padding: 0; list-style: none } .main-wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto; padding: 0 20px 20px 20px; box-sizing: border-box } .main-title { text-align: center; text-transform: uppercase } .home-link { position: relative; display: inline-block; margin-top: 30px; padding: 10px 20px; box-sizing: border-box; color: #333; background-color: #eee; border-radius: 3px; box-shadow: 1px 1px 5px rgba(0,0,0,.3) } .home-link:focus,.home-link:hover { background-color: #f6f6f6 } .home-link:focus { outline: 0 } .home-link:active { background-color: #f6f6f6; top: 1px } .wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto }
+  /*    конец общих стилей страницы*/
+  </style>
+  <link rel="stylesheet" href="button_scroll_to_top.css">
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1 class="main-title">Кнопка "Наверх" на JS</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur, numquam harum magnam. Deserunt, debitis maiores error aut? Veritatis, amet odit! Veniam est cumque iste, esse mollitia velit architecto aliquam necessitatibus dicta ad sunt, omnis unde. Maiores cupiditate dignissimos sapiente dolores debitis hic fugit sed, pariatur delectus natus deleniti ab, quibusdam minus modi dolore sint nihil odit adipisci error sequi facere esse deserunt mollitia. Possimus eius consequatur vero quam? Possimus voluptates ad ipsum tempora ut iure consequatur modi accusamus tempore earum dolorum odio veritatis, soluta unde voluptas nemo distinctio harum facilis iste, magni illum dolorem quos. Possimus doloribus nam porro dolorem voluptate odio officiis, cumque sint distinctio! Sunt, quaerat eum porro quidem. Reprehenderit ut repellendus placeat. Quam atque labore quisquam unde dignissimos assumenda velit cupiditate voluptate deleniti perspiciatis perferendis ex vel voluptas omnis placeat, consequatur, sint non rerum quia pariatur magnam ratione ipsam quis maxime. Quos provident, harum pariatur atque!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur, numquam harum magnam. Deserunt, debitis maiores error aut? Veritatis, amet odit! Veniam est cumque iste, esse mollitia velit architecto aliquam necessitatibus dicta ad sunt, omnis unde. Maiores cupiditate dignissimos sapiente dolores debitis hic fugit sed, pariatur delectus natus deleniti ab, quibusdam minus modi dolore sint nihil odit adipisci error sequi facere esse deserunt mollitia. Possimus eius consequatur vero quam? Possimus voluptates ad ipsum tempora ut iure consequatur modi accusamus tempore earum dolorum odio veritatis, soluta unde voluptas nemo distinctio harum facilis iste, magni illum dolorem quos. Possimus doloribus nam porro dolorem voluptate odio officiis, cumque sint distinctio! Sunt, quaerat eum porro quidem. Reprehenderit ut repellendus placeat. Quam atque labore quisquam unde dignissimos assumenda velit cupiditate voluptate deleniti perspiciatis perferendis ex vel voluptas omnis placeat, consequatur, sint non rerum quia pariatur magnam ratione ipsam quis maxime. Quos provident, harum pariatur atque!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur, numquam harum magnam. Deserunt, debitis maiores error aut? Veritatis, amet odit! Veniam est cumque iste, esse mollitia velit architecto aliquam necessitatibus dicta ad sunt, omnis unde. Maiores cupiditate dignissimos sapiente dolores debitis hic fugit sed, pariatur delectus natus deleniti ab, quibusdam minus modi dolore sint nihil odit adipisci error sequi facere esse deserunt mollitia. Possimus eius consequatur vero quam? Possimus voluptates ad ipsum tempora ut iure consequatur modi accusamus tempore earum dolorum odio veritatis, soluta unde voluptas nemo distinctio harum facilis iste, magni illum dolorem quos. Possimus doloribus nam porro dolorem voluptate odio officiis, cumque sint distinctio! Sunt, quaerat eum porro quidem. Reprehenderit ut repellendus placeat. Quam atque labore quisquam unde dignissimos assumenda velit cupiditate voluptate deleniti perspiciatis perferendis ex vel voluptas omnis placeat, consequatur, sint non rerum quia pariatur magnam ratione ipsam quis maxime. Quos provident, harum pariatur atque!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur, numquam harum magnam. Deserunt, debitis maiores error aut? Veritatis, amet odit! Veniam est cumque iste, esse mollitia velit architecto aliquam necessitatibus dicta ad sunt, omnis unde. Maiores cupiditate dignissimos sapiente dolores debitis hic fugit sed, pariatur delectus natus deleniti ab, quibusdam minus modi dolore sint nihil odit adipisci error sequi facere esse deserunt mollitia. Possimus eius consequatur vero quam? Possimus voluptates ad ipsum tempora ut iure consequatur modi accusamus tempore earum dolorum odio veritatis, soluta unde voluptas nemo distinctio harum facilis iste, magni illum dolorem quos. Possimus doloribus nam porro dolorem voluptate odio officiis, cumque sint distinctio! Sunt, quaerat eum porro quidem. Reprehenderit ut repellendus placeat. Quam atque labore quisquam unde dignissimos assumenda velit cupiditate voluptate deleniti perspiciatis perferendis ex vel voluptas omnis placeat, consequatur, sint non rerum quia pariatur magnam ratione ipsam quis maxime. Quos provident, harum pariatur atque!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur, numquam harum magnam. Deserunt, debitis maiores error aut? Veritatis, amet odit! Veniam est cumque iste, esse mollitia velit architecto aliquam necessitatibus dicta ad sunt, omnis unde. Maiores cupiditate dignissimos sapiente dolores debitis hic fugit sed, pariatur delectus natus deleniti ab, quibusdam minus modi dolore sint nihil odit adipisci error sequi facere esse deserunt mollitia. Possimus eius consequatur vero quam? Possimus voluptates ad ipsum tempora ut iure consequatur modi accusamus tempore earum dolorum odio veritatis, soluta unde voluptas nemo distinctio harum facilis iste, magni illum dolorem quos. Possimus doloribus nam porro dolorem voluptate odio officiis, cumque sint distinctio! Sunt, quaerat eum porro quidem. Reprehenderit ut repellendus placeat. Quam atque labore quisquam unde dignissimos assumenda velit cupiditate voluptate deleniti perspiciatis perferendis ex vel voluptas omnis placeat, consequatur, sint non rerum quia pariatur magnam ratione ipsam quis maxime. Quos provident, harum pariatur atque!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore consequuntur, numquam harum magnam. Deserunt, debitis maiores error aut? Veritatis, amet odit! Veniam est cumque iste, esse mollitia velit architecto aliquam necessitatibus dicta ad sunt, omnis unde. Maiores cupiditate dignissimos sapiente dolores debitis hic fugit sed, pariatur delectus natus deleniti ab, quibusdam minus modi dolore sint nihil odit adipisci error sequi facere esse deserunt mollitia. Possimus eius consequatur vero quam? Possimus voluptates ad ipsum tempora ut iure consequatur modi accusamus tempore earum dolorum odio veritatis, soluta unde voluptas nemo distinctio harum facilis iste, magni illum dolorem quos. Possimus doloribus nam porro dolorem voluptate odio officiis, cumque sint distinctio! Sunt, quaerat eum porro quidem. Reprehenderit ut repellendus placeat. Quam atque labore quisquam unde dignissimos assumenda velit cupiditate voluptate deleniti perspiciatis perferendis ex vel voluptas omnis placeat, consequatur, sint non rerum quia pariatur magnam ratione ipsam quis maxime. Quos provident, harum pariatur atque!</p>
+    <button class="btn--scroll"><span class="visually-hidden">Наверх</span></button>
+
+    <a href="../../index.html" class="home-link">На главную</a>
+  </div>
+  
+  <script>
+    var scrollBtn = document.querySelector('.btn--scroll');
+    
+    window.onscroll = function(evt) {
+      var pageY = window.pageYOffset || document.documentElement.scrollTop;
+      
+      if (pageYOffset > 0) {
+        scrollBtn.style.opacity = "1";
+      } else {
+         scrollBtn.style.opacity = "0";
+      }
+    }
+    
+    scrollBtn.onclick = scrollToTop;
+    
+    function scrollToTop() {
+      if (pageYOffset >= 100) {
+        window.scrollBy(0, -100);
+        var timeout = setTimeout(scrollToTop, 30);
+      } else {
+        window.scrollTo(0, 0);
+        clearTimeout(timeout);
+      }
+    }
+    
+  </script>
+</body>
+</html>
