@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Пагинация на jQuery</title>
+    <link rel="stylesheet" href="../../css/normalize.min.css">
+  <style>
+  /*    общие стили страницы*/
+    body,html { margin: 0; padding: 0; font-size: 10px } body { font-family: Arial,Helvetica,sans-serif; font-size: 16px; line-height: 1.8; color: #333 } a { text-decoration: none } img { max-width: 100%; height: auto } .visually-hidden { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; clip: rect(0 0 0 0) } ul { margin: 0; padding: 0; list-style: none } .main-wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto; padding: 0 20px 20px 20px; box-sizing: border-box } .main-title { text-align: center; text-transform: uppercase } .home-link { position: relative; display: inline-block; margin-top: 30px; padding: 10px 20px; box-sizing: border-box; color: #333; background-color: #eee; border-radius: 3px; box-shadow: 1px 1px 5px rgba(0,0,0,.3) } .home-link:focus,.home-link:hover { background-color: #f6f6f6 } .home-link:focus { outline: 0 } .home-link:active { background-color: #f6f6f6; top: 1px } .wrapper { max-width: 1200px; min-width: 320px; margin: 0 auto }
+  /*    конец общих стилей страницы*/
+  </style>
+  <link rel="stylesheet" href="pagination.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <h1 class="main-title">Пагинация на jQuery</h1>
+        <div class="pagination">
+            <ul class="pagination__list">
+                <li class="pagination__item">
+                    <button class="pagination__btn pagination__btn--prev"></button>
+                </li>
+
+            </ul>
+        </div>
+
+        <div class="page">
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 1</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 2</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 3</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 4</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 5</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 6</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 7</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 8</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 9</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 10</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 11</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+            <div class="page__item">
+                <h2 class="page__title">Заголовок 12</h2>
+                <p class="page__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem cumque delectus, deserunt dolore ea error exercitationem incidunt molestias placeat quaerat quo tempora velit veritatis. Assumenda, dignissimos doloribus ea eveniet iste laudantium! A aliquam, aperiam asperiores assumenda, blanditiis facere illo ipsum itaque iusto libero molestias officia omnis, reiciendis repellat sunt vel?</p>
+            </div>
+        </div>
+        <a href="../../index.html" class="home-link">На главную</a>
+    </div>
+<script src="../../libs/jquery-2.2.4.min.js"></script>
+<script src="scripts.js"></script>
+
+</body>
+</html>
